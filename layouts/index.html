@@ -1,0 +1,21 @@
+{{ partial "head.html" . }}
+<body>
+  <header>
+    <h1>kazkn.com</h1>
+    <aside>VOICE OF <a href="https://en.wikipedia.org/wiki/Gemba">GEMBA</a></aside>
+  </header>
+  <main>
+    <h2>Articles</h2>
+    <ul>
+      {{ range where .Site.Pages "Type" "post" }}
+      {{ partial "summary.html" . }}
+      {{ end }}
+    </ul>
+    <h2>Profile</h2>
+    <ul>
+      <li>Name: Kazuki Nishikawa</li>
+      <li>Job: Programmer</li>
+      <li>GitHub: <a href="https://github.com/kzkn">kzkn</a></li>
+    </ul>
+  </main>
+  {{ partial "footer.html" . }}

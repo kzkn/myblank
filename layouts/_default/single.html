@@ -1,0 +1,13 @@
+{{ partial "head.html" . }}
+<body>
+  <header>
+    <h1>{{ .Title }}</h1>
+    <time>{{ .Date.Format "2006-01-02" }}</time>
+  </header>
+  <main>
+    <article>
+	  {{ .Content }}
+    </article>
+  </main>
+  <footer><a href="{{ .Site.BaseURL }}">&laquo; Back to top</a></footer>
+{{ partial "footer.html" . }}
