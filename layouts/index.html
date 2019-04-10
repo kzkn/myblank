@@ -7,7 +7,7 @@
   <main>
     <h2>Articles</h2>
     <ul>
-      {{ range where .Site.Pages "Type" "post" }}
+      {{ range where .Site.RegularPages "Type" "post" }}
       {{ partial "summary.html" . }}
       {{ end }}
     </ul>
