@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ja">
+{{ partial "head.html" . }}
+<body class="site-top">
+  <main>
+    <h2>Articles</h2>
+    <ul>
+      {{ range where .Site.RegularPages "Type" "post" }}
+      {{ partial "summary.html" . }}
+      {{ end }}
+    </ul>
+  </main>
+</body>
+</html>

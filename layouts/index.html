@@ -8,10 +8,11 @@
   <main>
     <h2>Recent Articles</h2>
     <ul>
-      {{ range where .Site.RegularPages "Type" "post" }}
+      {{ range first 5 (where .Site.RegularPages "Type" "post") }}
       {{ partial "summary.html" . }}
       {{ end }}
     </ul>
+    <a href="/post">more articles...</a>
     <h2>About Me</h2>
     <dl>
       <dt>Name</dt>
