@@ -6,7 +6,6 @@
     <h1>kazkn.com</h1>
   </header>
   <main>
-    <h2>Recent Articles</h2>
     <ul>
       {{ range first 5 (where .Site.RegularPages "Type" "post") }}
       {{ partial "summary.html" . }}
@@ -17,8 +16,6 @@
     <dl>
       <dt>Name</dt>
       <dd>Kazuki Nishikawa</dd>
-      <dt>Job</dt>
-      <dd>Programmer</dd>
       <dt>GitHub</dt>
       <dd><a href="https://github.com/kzkn">kzkn</a></dd>
     </dl>
